@@ -1,0 +1,79 @@
+<div class="container" data-aos="fade-up">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-grid">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="card">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" />
+        <small *ngIf="submitted && f['name'].errors" class="error">
+          Name is required.
+        </small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" />
+        <small *ngIf="submitted && f['email'].errors" class="error">
+          Please enter a valid email.
+        </small>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" formControlName="message"></textarea>
+        <small *ngIf="submitted && f['message'].errors" class="error">
+          Message should be at least 10 characters.
+        </small>
+      </div>
+
+      <button class="btn" type="submit">
+        Send Message <i class="fa-regular fa-paper-plane"></i>
+      </button>
+
+      <p *ngIf="successMessage" class="success">
+        {{ successMessage }}
+      </p>
+    </form>
+
+    <div class="side card">
+      <h3>Let’s connect</h3>
+      <p>
+        Feel free to reach out for freelance work, collaborations, or just to say hi.
+      </p>
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/nithinnaidun" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/nithinnaidun" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:nithinnaidun1606@gmail.com">
+            <i class="fa-regular fa-envelope"></i> Email
+          </a>
+        </li>
+
+         <li>
+      <i class="fa-solid fa-phone"></i>
+      <span>+91 6366051370</span>
+    </li>
+
+    <li>
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Bengaluru, Karnataka</span>
+    </li>
+  
+
+
+    <a href="assets/Nithin_Naidu_Resume.pdf" download class="btn">
+  <i class="fa-solid fa-download"></i> Download Resume
+</a>
+      </ul>
+    </div>
+  </div>
+</div>

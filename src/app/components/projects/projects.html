@@ -1,0 +1,50 @@
+<div class="container" data-aos="fade-up">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+    <article class="project-card card" *ngFor="let project of projects" data-aos="zoom-in">
+
+      <!-- Project Image -->
+      <!-- <div class="project-image">
+        <img [src]="project.image" [alt]="project.title" />
+      </div> -->
+
+      <!-- Project Content -->
+      <div class="project-content">
+        <h3>{{ project.title }}</h3>
+
+        <p class="description">
+          {{ project.description }}
+        </p>
+
+        <!-- Tech Stack -->
+        <div class="tech-list">
+          <span *ngFor="let tech of project.technologies" class="tech-pill">
+            {{ tech }}
+          </span>
+        </div>
+
+        <!-- Links -->
+        <div class="links" *ngIf="project.liveUrl || project.codeUrl">
+
+          <a *ngIf="project.liveUrl" 
+             [href]="project.liveUrl" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+          </a>
+
+          <a *ngIf="project.codeUrl" 
+             [href]="project.codeUrl" 
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+  </div>
+</div>

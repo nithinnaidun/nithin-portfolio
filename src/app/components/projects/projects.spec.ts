@@ -1,0 +1,25 @@
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ProjectService, Project } from '../../shared/services/project';
+
+@Component({
+  selector: 'app-projects',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './projects.html',
+  styleUrl: './projects.scss'
+})
+export class ProjectsComponent implements OnInit {
+
+  projects: Project[] = [];
+
+  constructor(private projectService: ProjectService) {}
+
+  ngOnInit(): void {
+    this.projectService.getProjects().subscribe({
+      next: (data) => this.projects = data,
+      error: (err) => console.error('Error loading projects:', err)
+    });
+  }
+
+}
