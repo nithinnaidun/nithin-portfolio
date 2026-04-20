@@ -2,8 +2,9 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+
   "projects": {
-    "devspark-portfolio": {
+    "nithin-naidu-n-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -13,32 +14,34 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/nithin-naidu-n-portfolio",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
+
             "styles": [
               "src/styles.scss",
               "node_modules/aos/dist/aos.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
+
             "scripts": [],
-            "allowedCommonJsDependencies": [
-              "aos"
-            ]
+            "allowedCommonJsDependencies": ["aos"]
           },
+
           "configurations": {
             "production": {
               "budgets": [
@@ -55,54 +58,62 @@
               ],
               "outputHashing": "all"
             },
+
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
             }
           },
+
           "defaultConfiguration": "production"
         },
+
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "devspark-portfolio:build:production"
+              "buildTarget": "nithin-naidu-n-portfolio:build:production"
             },
             "development": {
-              "buildTarget": "devspark-portfolio:build:development"
+              "buildTarget": "nithin-naidu-n-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
+
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },
+
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
+
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
+
             "styles": [
               "src/styles.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
+
             "scripts": []
           }
         }
       }
     }
   },
+
+  "defaultProject": "nithin-naidu-n-portfolio",
+
   "cli": {
     "analytics": false
   }
