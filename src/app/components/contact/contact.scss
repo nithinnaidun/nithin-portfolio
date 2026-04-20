@@ -111,20 +111,30 @@ textarea:focus {
 
 
 
-.resume-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 1rem;
-  background: var(--accent);
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
+// .resume-btn {
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 0.4rem;
+//   margin-top: 1rem;
+//   background: var(--accent);
+//   color: white;
+//   padding: 8px 14px;
+//   border-radius: 6px;
+//   text-decoration: none;
+//   transition: 0.3s ease;
+// }
 
-.resume-btn:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
+// .resume-btn:hover {
+//   background: #1d4ed8;
+//   transform: translateY(-2px);
+// }
+
+
+.resume-btn {
+  margin-top: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
 }

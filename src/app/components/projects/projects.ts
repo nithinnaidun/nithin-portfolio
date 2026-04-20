@@ -42,7 +42,15 @@ export class ProjectsComponent {
       technologies: ['Python', 'YOLOv3', 'OpenCV'],
       // image: 'assets/yolo.png'
       // no codeUrl, no liveUrl → OK
-    }
+    },
+
+    {
+  title: 'Personal Portfolio Website',
+  description: 'Responsive personal portfolio built with Angular featuring projects, skills, contact form, and smooth animations.',
+  technologies: ['Angular', 'TypeScript', 'SCSS', 'AOS'],
+  codeUrl: 'https://github.com/nithinnaidun/nithin-portfolio',
+  liveUrl: 'https://nithinnaidunportfolio.netlify.app'
+}
   ];
 
 }
