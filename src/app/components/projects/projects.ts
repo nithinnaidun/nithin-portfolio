@@ -49,7 +49,7 @@ export class ProjectsComponent {
   description: 'Responsive personal portfolio built with Angular featuring projects, skills, contact form, and smooth animations.',
   technologies: ['Angular', 'TypeScript', 'SCSS', 'AOS'],
   codeUrl: 'https://github.com/nithinnaidun/nithin-portfolio',
-  liveUrl: 'https://nithinnaidunportfolio.netlify.app'
+  liveUrl: 'https://nithin-naidu-portfolio.netlify.app/'
 }
   ];
 
